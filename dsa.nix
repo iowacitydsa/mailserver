@@ -9,7 +9,7 @@ in
   services.mlmmj =
     { enable = true;
       listDomain = "iowacitydsa.org";
-      mailLists = [ "exec" "list" ];
+      mailLists = [ "exec" "members" "announce" ];
     };
 
   services.postfix =
@@ -17,6 +17,7 @@ in
       # Private email aliases are stored in this file,
       # included an alias for $adminMail
 
+      hostname = "mail.iowacitydsa.org";
       destination = [ "iowacitydsa.org" ];
       domain = "iowacitydsa.org";
       enableSubmission = true;
