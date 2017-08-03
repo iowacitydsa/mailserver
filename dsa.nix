@@ -31,7 +31,6 @@ in
 
   services.nginx.virtualHosts."mail.iowacitydsa.org" =
     { enableACME = true;
-      port = acmeCallbackPort;
     };
 
   security.acme.certs."mail.iowacitydsa.org".email = adminMail;
